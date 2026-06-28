@@ -1,0 +1,25 @@
+name: ESP32 Camera Bridge
+slug: esp32_cam_bridge
+version: "1.0.0"
+description: Stream ESP32-CAM frames to ESP32 TFT
+
+url: https://github.com/richard/esp32_cam_bridge
+
+startup: application
+boot: auto
+
+host_network: true
+
+init: false
+
+arch:
+  - amd64
+
+ports:
+  8088/tcp: 8088
+
+options:
+  camera_url: "http://192.168.100.13:8080"
+
+schema:
+  camera_url: str
