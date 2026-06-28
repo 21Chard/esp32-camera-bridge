@@ -1,5 +1,3 @@
 flask
 numpy
 pillow
-requests
-opencv-python-headless
