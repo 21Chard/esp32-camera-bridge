@@ -1,16 +1,14 @@
-FROM ghcr.io/home-assistant/base:latest
+ARG BUILD_FROM
+FROM ${BUILD_FROM}
 
-LABEL \
-  io.hass.version="1.0.0" \
-  io.hass.type="app" \
-  io.hass.arch="amd64"
+RUN apk add --no-cache python3 py3-pip
 
-RUN apk add --no-cache \
-    python3 \
-    py3-pip
+COPY requirements.txt /tmp/
 
+RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
+
+COPY server.py /app/
 COPY run.sh /
-COPY server.py /
 
 RUN chmod +x /run.sh
 
