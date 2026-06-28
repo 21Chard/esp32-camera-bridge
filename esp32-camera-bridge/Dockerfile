@@ -16,6 +16,8 @@ COPY requirements.txt /requirements.txt
 
 RUN python3 -m pip install --no-cache-dir --break-system-packages -r /requirements.txt
 
+RUN python3 -m pip list
+
 COPY server.py /server.py
 COPY run.sh /run.sh
 
