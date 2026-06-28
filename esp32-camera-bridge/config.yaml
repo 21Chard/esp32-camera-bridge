@@ -1,6 +1,6 @@
 name: ESP32 Camera Bridge
 slug: esp32_cam_bridge
-version: "1.0.7"
+version: "1.0.8"
 description: Stream ESP32-CAM frames to ESP32 TFT
 
 url: https://github.com/21Chard/esp32_cam_bridge
