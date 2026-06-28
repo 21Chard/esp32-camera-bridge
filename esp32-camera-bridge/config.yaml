@@ -3,7 +3,7 @@ slug: esp32_cam_bridge
 version: "1.0.0"
 description: Stream ESP32-CAM frames to ESP32 TFT
 
-url: https://github.com/richard/esp32_cam_bridge
+url: https://github.com/21Chard/esp32_cam_bridge
 
 startup: application
 boot: auto
