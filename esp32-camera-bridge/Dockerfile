@@ -7,11 +7,20 @@ LABEL \
 
 RUN apk add --no-cache \
     python3 \
-    py3-pip
+    py3-pip \
+    build-base \
+    jpeg-dev \
+    zlib-dev
 
-COPY run.sh /
-COPY server.py /
+COPY requirements.txt /requirements.txt
+
+RUN python3 -m pip install --no-cache-dir --break-system-packages -r /requirements.txt
+
+COPY server.py /server.py
+COPY run.sh /run.sh
 
 RUN chmod +x /run.sh
+
+EXPOSE 8088
 
 CMD ["/run.sh"]
