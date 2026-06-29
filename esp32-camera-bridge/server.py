@@ -48,8 +48,8 @@ def image_to_rgb565(img):
                 (b >> 3)
             )
 
-            buffer.append((rgb565 >> 8) & 0xFF)
-            buffer.append(rgb565 & 0xFF)
+            buffer.append(rgb565 & 0xFF)          # Low byte first
+            buffer.append((rgb565 >> 8) & 0xFF)   # High byte second
 
     return bytes(buffer)
 
