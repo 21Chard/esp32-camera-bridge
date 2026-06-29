@@ -13,8 +13,8 @@ app = Flask(__name__)
 
 CAMERA_URL = "http://192.168.100.13:8080"
 
-DISPLAY_WIDTH = 128
-DISPLAY_HEIGHT = 160
+DISPLAY_WIDTH = 480
+DISPLAY_HEIGHT = 640
 
 # ==========================================================
 # Shared Buffers
